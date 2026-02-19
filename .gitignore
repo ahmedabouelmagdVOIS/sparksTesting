@@ -1,0 +1,6 @@
+
+.idea
+
+**/node_modules/
+**/testResults/
+frameworks/playwright/apps/*/.env*

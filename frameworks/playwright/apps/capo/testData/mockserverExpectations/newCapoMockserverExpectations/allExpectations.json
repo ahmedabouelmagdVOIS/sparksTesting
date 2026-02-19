@@ -1,0 +1,723 @@
+[
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_bad_request"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 400,
+      "body": "No such vhost available"
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_DXL_error"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 500,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "code": "js-device-activation.E500F_ACTIVATION_PREREQUISITE_ERROR",
+        "reason": "An Error has occurred while fetching activation prerequisites",
+        "message": "|ErrorReference: 89f7ab26-3bc7-4d7b-a5fa-612752c6cddc|",
+        "status": "500",
+        "@baseType": "Error",
+        "@type": "ErrorExtended"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_DXL_landing_unexpected_response"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 418,
+      "body": "I'm a teapot"
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_activation_bad_request"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "activationStatus": "notStarted",
+        "salutation": "{{salutation}}",
+        "formattedName": "Herr König Max Mustermann",
+        "aristocraticTitle": "König",
+        "givenName": "{{firstName}}",
+        "familyName": "testMustermann",
+        "productName": "Red Internet 50 Cable",
+        "contractId": "urn:vf-de-dxl-tmf:solstice:contract:dxlReturns400"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_activation_error"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "activationStatus": "notStarted",
+        "salutation": "{{salutation}}",
+        "formattedName": "Herr König Max Mustermann",
+        "aristocraticTitle": "König",
+        "givenName": "{{firstName}}",
+        "familyName": "testMustermann",
+        "productName": "Red Internet 50 Cable",
+        "contractId": "urn:vf-de-dxl-tmf:solstice:contract:dxlReturns500"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_activation_network_error"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "activationStatus": "notStarted",
+        "salutation": "{{salutation}}",
+        "formattedName": "Herr König Max Mustermann",
+        "aristocraticTitle": "König",
+        "givenName": "{{firstName}}",
+        "familyName": "testMustermann",
+        "productName": "Red Internet 50 Cable",
+        "contractId": "urn:vf-de-dxl-tmf:solstice:contract:networkErrorTestContractId"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_activation_success"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "activationStatus": "notStarted",
+        "salutation": "{{salutation}}",
+        "formattedName": "Herr König Max Mustermann",
+        "aristocraticTitle": "König",
+        "givenName": "{{firstName}}",
+        "familyName": "testMustermann",
+        "productName": "Red Internet 50 Cable",
+        "contractId": "urn:vf-de-dxl-tmf:solstice:contract:successfulTestContractId"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_activation_unexpected_error"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "activationStatus": "notStarted",
+        "salutation": "{{salutation}}",
+        "formattedName": "Herr König Max Mustermann",
+        "aristocraticTitle": "König",
+        "givenName": "{{firstName}}",
+        "familyName": "testMustermann",
+        "productName": "Red Internet 50 Cable",
+        "contractId": "urn:vf-de-dxl-tmf:solstice:contract:unexpectedErrorTestContractId"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_contract_id_only"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "activationStatus": "notStarted",
+        "contractId": "urn:vf-de-dxl-tmf:solstice:contract:successfulTestContractId"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_ineligible"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "activationStatus": "failed"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_network_error"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 404,
+      "body": "No such vhost available"
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_no_contract_id"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "activationStatus": "notStarted",
+        "salutation": "{{salutation}}",
+        "formattedName": "Herr König Max Mustermann",
+        "aristocraticTitle": "König",
+        "givenName": "{{firstName}}",
+        "familyName": "testMustermann",
+        "productName": "Red Internet 50 Cable"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/activationPrerequisite",
+      "queryStringParameters": {
+        "ipAddress": [
+          "urn:vf-de-dxl-tmf:common:net:ip-address:IP_pending"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "activationStatus": "inProgress"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/contract/urn:vf-de-dxl-tmf:solstice:contract:dxlReturns400/earlyActivation",
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 400,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "code": "general.E500F_GENERAL_ERROR",
+        "reason": "Detailed description of the error reason",
+        "message": "|ErrorReference: 89f7ab26-3bc7-4d7b-a5fa-612752c6cddc|",
+        "status": "500",
+        "@baseType": "Error",
+        "@type": "ErrorExtended"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/contract/urn:vf-de-dxl-tmf:solstice:contract:unexpectedErrorTestContractId/earlyActivation",
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 418,
+      "body": "I'm a teapot"
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/contract/urn:vf-de-dxl-tmf:solstice:contract:dxlReturns500/earlyActivation",
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 500,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "code": "general.E500F_GENERAL_ERROR",
+        "reason": "Detailed description of the error reason",
+        "message": "|ErrorReference: 89f7ab26-3bc7-4d7b-a5fa-612752c6cddc|",
+        "status": "500",
+        "@baseType": "Error",
+        "@type": "ErrorExtended"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/contract/urn:vf-de-dxl-tmf:solstice:contract:networkErrorTestContractId/earlyActivation",
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 404,
+      "body": "No such vhost available"
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/contract/urn:vf-de-dxl-tmf:solstice:contract:successfulTestContractId/earlyActivation",
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Authorization": [
+          "Bearer dummyAccessToken"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 202,
+      "headers": {
+        "x-b3-traceid": [
+          "xB3TraceidDummy"
+        ]
+      },
+      "body": {
+        "orderId": "urn:vf-de-dxl-tmf:solstice:order:2000125811"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/captiveportal/{{serverUuid}}/solstice/v1/oauth2/token",
+      "queryStringParameters": {
+        "grant_type": [
+          "client_credentials"
+        ]
+      },
+      "headers": {
+        "x-api-key": [
+          "dummySolsticeApiKey"
+        ],
+        "Content-Type": [
+          "application/x-www-form-urlencoded"
+        ],
+        "Authorization": [
+          "Basic dummySolsticeAuthorizationHeader"
+        ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": {
+        "token_type": "BearerToken",
+        "issued_at": "1756369388610",
+        "access_token": "dummyAccessToken",
+        "scope": "solstice-v1:access_token",
+        "expires_in": "1"
+      }
+    },
+    "priority": 0,
+    "timeToLive": {
+      "timeUnit": "MINUTES",
+      "timeToLive": 10
+    },
+    "times": {
+      "unlimited": true
+    }
+  }
+]

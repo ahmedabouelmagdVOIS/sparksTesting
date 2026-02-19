@@ -1,0 +1,150 @@
+{
+  "httpRequest": {
+    "method": "GET",
+    "path": "/dxl-preprod/solstice/v1/tmf-api/resourceInventoryManagement/v4/resource",
+    "queryStringParameters": {
+      "resourceRelationship.resource.id": ["urn:vf-de-dxl-tmf:vf:common:ip:{{dummyIpAddress}}"],
+      "resourceRelationship.resource.name": ["cmIpAddress"]
+    },
+    "headers": {
+      "Authorization": ["Bearer .*"]
+    }
+  },
+  "httpResponse": {
+    "statusCode": 200,
+    "body": [
+      {
+        "id": "urn:vf-de-dxl-tmf:common:device:mac-address:{{dummyMacAddress}}",
+        "href": "https://dxl-preprod.hub.citt.connect-vf.de/solstice/v1/tmf-api/resourceInventoryManagement/v4/physicalResource?resourceRelationship.id=urn:vf-de-dxl-tmf:vf:common:ip:{{dummyIpAddress}}&resourceRelationship.resource.name=cmIpAddress",
+        "category": "cableModem",
+        "description": "FRITZ!Box Fon WLAN <<HW_REV: 157.2; VENDOR: AVM GmbH; BOOTR: 1.964; SW_REV: 85.06.56; MODEL: 6360>>",
+        "resourceVersion": "157.2",
+        "administrativeState": "unlocked",
+        "operationalState": "enable",
+        "relatedParty": [
+          {
+            "id": "-1",
+            "name": "AVM GmbH",
+            "role": "vendor",
+            "@type": "RelatedParty",
+            "@referredType": "Organization"
+          },
+          {
+            "id": "-1",
+            "name": "Vodafone",
+            "role": "owner",
+            "@type": "RelatedParty",
+            "@referredType": "Organization"
+          }
+        ],
+        "resourceCharacteristic": [
+          {
+            "name": "bootRom",
+            "valueType": "string",
+            "value": "1.964"
+          },
+          {
+            "name": "docsisVersion",
+            "valueType": "string",
+            "value": "3.0"
+          },
+          {
+            "name": "firmwareFilename",
+            "valueType": "string",
+            "value": "6360.85.06.56.073008002010.cvc"
+          },
+          {
+            "name": "firmwareVersion",
+            "valueType": "string",
+            "value": "85.06.56"
+          },
+          {
+            "name": "index",
+            "valueType": "integer",
+            "value": 105
+          },
+          {
+            "name": "model",
+            "valueType": "string",
+            "value": "6360"
+          },
+          {
+            "name": "snmpAccess",
+            "valueType": "boolean",
+            "value": true
+          },
+          {
+            "name": "cmtsRegistrationStatus",
+            "valueType": "string",
+            "value": "operational"
+          },
+          {
+            "name": "segmentId",
+            "valueType": "string",
+            "value": "2000007-1806"
+          },
+          {
+            "name": "uptime",
+            "valueType": "string",
+            "value": "PT331H14M12.039341659S"
+          },
+          {
+            "name": "lastStatusChange",
+            "valueType": "datetime",
+            "value": "2025-04-15T13:15:42.137441Z"
+          }
+        ],
+        "resourceRelationship": [
+          {
+            "id": "urn:vf-de-dxl-tmf:vf:common:mac-address:{{dummyMacAddress}}",
+            "href": "https://dxl-preprod.hub.citt.connect-vf.de/solstice/v1/tmf-api/resourceInventoryManagement/v4/logicalResource/urn:vf-de-dxl-tmf:vf:common:mac-address:{{dummyMacAddress}}",
+            "relationshipType": "assignedBy",
+            "resource": {
+              "href": "https://dxl-preprod.hub.citt.connect-vf.de/solstice/v1/tmf-api/resourceInventoryManagement/v4/logicalResource/urn:vf-de-dxl-tmf:vf:common:mac-address:{{dummyMacAddress}}",
+              "value": "{{dummyMacAddress}}",
+              "id": "urn:vf-de-dxl-tmf:vf:common:mac-address:{{dummyMacAddress}}",
+              "category": "macAddress",
+              "@type": "LogicalResource"
+            }
+          },
+          {
+            "id": "urn:vf-de-dxl-tmf:vf:common:ip:{{dummyIpAddress}}",
+            "href": "https://dxl-preprod.hub.citt.connect-vf.de/solstice/v1/tmf-api/resourceInventoryManagement/v4/logicalResource/urn:vf-de-dxl-tmf:vf:common:ip:{{dummyIpAddress}}",
+            "relationshipType": "assignedBy",
+            "resource": {
+              "href": "https://dxl-preprod.hub.citt.connect-vf.de/solstice/v1/tmf-api/resourceInventoryManagement/v4/logicalResource/urn:vf-de-dxl-tmf:vf:common:ip:{{dummyIpAddress}}",
+              "value": "{{dummyIpAddress}}",
+              "id": "urn:vf-de-dxl-tmf:vf:common:ip:{{dummyIpAddress}}",
+              "category": "ipAddress",
+              "name": "cmIpAddress",
+              "@type": "LogicalResource"
+            }
+          },
+          {
+            "id": "urn:vf-de-dxl-tmf:vf:common:ip:10.12.66.23",
+            "href": "https://dxl-preprod.hub.citt.connect-vf.de/solstice/v1/tmf-api/resourceInventoryManagement/v4/logicalResource/urn:vf-de-dxl-tmf:vf:common:ip:10.12.66.23",
+            "relationshipType": "assignedBy",
+            "resource": {
+              "href": "https://dxl-preprod.hub.citt.connect-vf.de/solstice/v1/tmf-api/resourceInventoryManagement/v4/logicalResource/urn:vf-de-dxl-tmf:vf:common:ip:10.12.66.23",
+              "value": "10.12.66.23",
+              "id": "urn:vf-de-dxl-tmf:vf:common:ip:10.12.66.23",
+              "category": "ipAddress",
+              "name": "cmtsIpAddress",
+              "@type": "LogicalResource"
+            }
+          }
+        ],
+        "@type": "PhysicalResource"
+      }
+    ]
+  },
+  "timeToLive": {
+    "timeUnit": "MINUTES",
+    "timeToLive": 5,
+    "unlimited": false
+  },
+  "times": {
+    "remainingTimes": 1
+  },
+  "priority": 1
+}

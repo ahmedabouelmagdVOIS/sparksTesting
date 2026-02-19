@@ -1,0 +1,241 @@
+[
+  {
+    "cookie_name": "eapCustomerServiceAddressCheckMock",
+    "cookie_elements": {
+      "allowedCustomerType": {
+        "options": [
+          "true",
+          "false",
+          "error"
+        ],
+        "default_option": "true"
+      },
+      "companyOwnedDeviceCase": {
+        "options": [
+          "success - ip:10.0.0.1",
+          "unassignedDeviceError - ip:10.0.0.2",
+          "docsisVersionTooLowError - ip:10.0.0.3",
+          "refurbishedDeviceError - ip:10.0.0.4"
+        ],
+        "default_option": "success - ip:10.0.0.1"
+      }
+    }
+  },
+  {
+    "cookie_name": "eapVoiceAdapterClientMock",
+    "cookie_elements": {
+      "withSipCredentials": {
+        "options": [
+          "true - new data format",
+          "true - old data format",
+          "error"
+        ],
+        "default_option": "true - new data format"
+      },
+      "optionsForSipCredentials": {
+        "options": [
+          "with password - 1 telephone number",
+          "with password - 10 telephone numbers",
+          "without password - 1 telephone number",
+          "without password - 10 telephone numbers"
+        ],
+        "default_option": "with password - 1 telephone number"
+      }
+    }
+  },
+  {
+    "cookie_name": "eapCRMDataProviderMock",
+    "cookie_elements": {
+      "isDeviceCompanyOwned": {
+        "options": [
+          "false",
+          "true"
+        ],
+        "default_option": "false"
+      },
+      "hasKAVContract": {
+        "options": [
+          "true",
+          "false"
+        ],
+        "default_option": "true"
+      },
+      "hasKAIContract": {
+        "options": [
+          "true",
+          "false"
+        ],
+        "default_option": "true"
+      }
+    }
+  },
+  {
+    "cookie_name": "eapAccountManagementServiceMock",
+    "cookie_elements": {
+      "error": {
+        "options": [
+          "NO_ERROR",
+          "INVALID_CREDENTIALS",
+          "ACCOUNT_LOCKED",
+          "ACCOUNT_TEMPORARILY_LOCKED",
+          "CREDENTIALS_EXPIRED",
+          "LAST_TRY_BEFORE_LOCK",
+          "ACCOUNT_NOT_ALLOWED",
+          "NOT_ALLOWED",
+          "TECHNICAL_ERROR",
+          "UNKNOWN_MINT_ERROR",
+          "VALIDATION_FAILED",
+          "MALFORMED_REQUEST",
+          "INSUFFICIENT_PRIVILEGES",
+          "ACCOUNT_NOT_FOUND",
+          "CONFIGURATION_PROBLEM",
+          "PROBLEM_WITH_EXTERNAL_SERVICE",
+          "UNKNOWN_INTERNAL_ERROR",
+          "EMAIL_NOT_VERIFIED"
+        ],
+        "default_option": "NO_ERROR"
+      }
+    }
+  },
+  {
+    "cookie_name": "eapDeviceActivationClientMock",
+    "cookie_elements": {
+      "ContractIds": {
+        "default_option": ""
+      },
+      "ActivationState": {
+        "options": [
+          "Completed",
+          "Acknowledged",
+          "Rejected",
+          "Pending",
+          "Held",
+          "InProgress",
+          "Cancelled",
+          "Failed",
+          "Partial",
+          "AssessingCancellation",
+          "PendingCancellation",
+          "Draft",
+          "unknown"
+        ],
+        "default_option": "Completed"
+      },
+      "withSipCredentials": {
+        "options": [
+          "true - 1 SIP Account",
+          "true - 10 SIP Accounts",
+          "false"
+        ],
+        "default_option": "true - 1 SIP Account"
+      },
+      "ErrorActivationState": {
+        "options": [
+          "noError",
+          "OrderNotFoundException",
+          "SolsticeWorkflowException",
+          "DeviceActivationException",
+          "SipCredentialsNotFoundException"
+        ],
+        "default_option": "noError"
+      },
+      "ErrorActivateDevice": {
+        "options": [
+          "noError",
+          "PendingOrderException",
+          "SolsticeWorkflowException",
+          "DeviceActivationException"
+        ],
+        "default_option": "noError"
+      }
+    }
+  },
+  {
+    "cookie_name": "eapResourceInventoryManagementClientMock",
+    "cookie_elements": {
+      "macAddress": {
+        "default_option": "0C:47:3D:19:83:50"
+      },
+      "docsisVersion": {
+        "default_option": "3"
+      }
+    }
+  },
+  {
+    "cookie_name": "provisioningExecuteMockForEap",
+    "cookie_elements": {}
+  },
+  {
+    "cookie_name": "provisioningHsiDataMockForEap",
+    "cookie_elements": {}
+  },
+  {
+    "cookie_name": "capoIpAddressMock",
+    "cookie_elements": {
+      "ipAddress": {
+        "default_option": "1.2.3.4"
+      }
+    }
+  },
+  {
+    "cookie_name": "eapMintLogoutMock",
+    "cookie_elements": {}
+  },
+  {
+    "cookie_name": "eapMintClientMock",
+    "cookie_elements": {
+      "isSolsticeCustomer": {
+        "options": [
+          "true",
+          "false"
+        ],
+        "default_option": "true"
+      },
+      "solsticeCustomerIds": {
+        "default_option": ""
+      },
+      "Exception": {
+        "options": [
+          "None",
+          "invalidArgumentException",
+          "restApiException"
+        ],
+        "default_option": "noException"
+      }
+    }
+  },
+  {
+    "cookie_name": "eapOpenIdConnectClientMock",
+    "cookie_elements": {
+      "expectedCode": {
+        "default_option": ""
+      },
+      "expectedState": {
+        "default_option": ""
+      },
+      "Exception": {
+        "options": [
+          "None",
+          "clientException",
+          "verificationException"
+        ],
+        "default_option": "None"
+      }
+    }
+  },
+  {
+    "cookie_name": "eapIpFakesMock",
+    "cookie_elements": {
+      "ipAddress": {
+        "default_option": "10.0.0.1"
+      },
+      "network": {
+        "options": [
+          "VKD",
+          "UM"
+        ],
+        "default_option": "VKD"
+      }
+    }
+  }
+]

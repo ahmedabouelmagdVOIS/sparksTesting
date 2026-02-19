@@ -1,0 +1,26 @@
+
+{
+    "loginPage": {
+      "usernameField_ID": "#usernameInput",
+      "passwordField_ID": "#passwordInput",
+      "loginButton_ID": "#loginSubmit"
+    },
+    "LetterStore": {
+      "SearchByDropDown_ID": "#searchby",
+      "AccountNumber_ID": "#accountNumber",
+      "SearchButton_XPATH":"//input[@type='submit' and @name='submitSearch' and @value='Suchen']",
+      "Dummy":"Dummy"
+    },
+    "LogisticsPartnerSimulator": {
+        "BundleFileName_ID":"#BundleFileName",
+        "ConfirmButton_XPATH" : "//input[@type='submit' and @value='Confirm delivery']",
+        "Dummy":"Dummy"
+    },
+    "GeneralJMC": {
+      "LHSmenu_ID":"#menu",
+      "Dummy":"Dummy"
+  }
+  }
+  
+
+

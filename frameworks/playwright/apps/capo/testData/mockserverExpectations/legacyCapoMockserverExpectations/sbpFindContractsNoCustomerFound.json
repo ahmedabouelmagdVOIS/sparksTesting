@@ -1,0 +1,23 @@
+{
+  "httpRequest": {
+    "method": "POST",
+    "path": "/SbpProvisioningAccountData/provisioning-account-data/ProvisioningAccountData",
+    "body": {
+      "type": "XML",
+      "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"http://ws.kdg.de/provisioning/data/account/types\"><SOAP-ENV:Body><ns1:FindContractsParams><ns1:findBy>macAddress</ns1:findBy><ns1:searchValue>{{dummyMacAddressLowercase}}</ns1:searchValue><ns1:contractType>hsi</ns1:contractType><ns1:clientInfo><ns1:application>itech</ns1:application></ns1:clientInfo></ns1:FindContractsParams></SOAP-ENV:Body></SOAP-ENV:Envelope>"
+    }
+  },
+  "httpResponse": {
+    "statusCode": 200,
+    "body": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"><soap:Body><FindContractsResult xmlns:ns2=\"http://ipeng.technik.kdg.de/sbp/errors\" xmlns=\"http://ws.kdg.de/provisioning/data/account/types\"><accountNr/><provider/><message><message>Zu der Suche nach macAddress mit dem Parameter {{dummyMacAddressLowercase}} konnten keine Bestandskundendaten in der SBP-Plattform ermittelt werden.</message><errorCode>SBP-50004</errorCode><errorMessage>Zu der Suche nach macAddress mit dem Parameter {{dummyMacAddressLowercase}} konnten keine Bestandskundendaten in der SBP-Plattform ermittelt werden.</errorMessage></message></FindContractsResult></soap:Body></soap:Envelope>"
+  },
+  "timeToLive": {
+    "timeUnit": "MINUTES",
+    "timeToLive": 5,
+    "unlimited": false
+  },
+  "times": {
+    "remainingTimes": 1
+  },
+  "priority": 1
+}

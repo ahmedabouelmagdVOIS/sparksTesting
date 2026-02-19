@@ -1,0 +1,78 @@
+name: Playwright Tests
+ 
+on:
+  workflow_dispatch:
+    inputs:
+      app_selection:
+        description: 'Select Application'
+        required: true
+        default: 'eap'
+        type: choice
+        options: [jmc, eap, all]
+      env_selection:
+        description: 'Select Environment'
+        required: true
+        default: 'test1b'
+        type: choice
+        options: [test1b, test2b]
+ 
+jobs:
+  setup-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - id: set-matrix
+        run: |
+          if [[ "${{ github.event.inputs.app_selection }}" == "all" ]]; then
+            APPS='[{"name": "eap", "secret": "EAP"}, {"name": "jmc", "secret": "JMC"}]'
+          else
+            APP_LOWER=$(echo "${{ github.event.inputs.app_selection }}" | tr '[:upper:]' '[:lower:]')
+            APP_UPPER=$(echo "${{ github.event.inputs.app_selection }}" | tr '[:lower:]' '[:upper:]')
+            APPS="[{\"name\": \"$APP_LOWER\", \"secret\": \"$APP_UPPER\"}]"
+          fi
+          echo "matrix={\"app\":$APPS, \"ENV\":[\"${{ github.event.inputs.env_selection }}\"]}" >> $GITHUB_OUTPUT
+ 
+  test:
+    needs: setup-matrix
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.setup-matrix.outputs.matrix) }}
+ 
+    env:
+      PLAYWRIGHT_DIR: frameworks/playwright
+      APP_NAME: ${{ matrix.app.name }}
+      ENV: ${{ matrix.ENV }}
+      BASE_URL: ${{ secrets[format('{0}_BASE_URL', matrix.app.secret)] }}
+      USERNAME: ${{ secrets[format('{0}_USERNAME', matrix.app.secret)] }}
+      PASSWORD: ${{ secrets[format('{0}_PASSWORD', matrix.app.secret)] }}
+      CI: true
+ 
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'npm'
+          cache-dependency-path: ${{ env.PLAYWRIGHT_DIR }}/package-lock.json
+ 
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ${{ env.PLAYWRIGHT_DIR }}
+ 
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+        working-directory: ${{ env.PLAYWRIGHT_DIR }}
+ 
+      - name: Run Tests
+        run: npx playwright test --project=${{ matrix.app.name }}
+        working-directory: ${{ env.PLAYWRIGHT_DIR }}
+ 
+      - name: Upload Artifacts
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ matrix.app.name }}-${{ matrix.ENV }}
+          path: ${{ env.PLAYWRIGHT_DIR }}/testResults/reports/
+          retention-days: 30

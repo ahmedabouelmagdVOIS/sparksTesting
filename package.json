@@ -1,0 +1,19 @@
+{
+  "name": "featuretestinginternalinitiative",
+  "version": "1.0.0",
+  "description": "Common automation testing framework",
+  "main": "index.ts",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VFDE-Portals/FeatureTestingInternalInitiative.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VFDE-Portals/FeatureTestingInternalInitiative/issues"
+  },
+  "homepage": "https://github.com/VFDE-Portals/FeatureTestingInternalInitiative#readme"
+}

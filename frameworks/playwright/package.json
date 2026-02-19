@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "playwright": "^1.56.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.10.9"
+  },
+  "scripts": {
+    "test:jmc:test1b:headed":"APP_NAME=jmc ENV=test1b npx playwright test --project=jmc --headed",
+    "test:jmc:test2b:headed":"APP_NAME=jmc ENV=test2b npx playwright test --project=jmc --headed",
+    "test:jmc:test1b:unheaded":"APP_NAME=jmc ENV=test1b npx playwright test --project=jmc ",
+    "test:jmc:test2b:unheaded":"APP_NAME=jmc ENV=test2b npx playwright test --project=jmc "
+    
+  }
+}

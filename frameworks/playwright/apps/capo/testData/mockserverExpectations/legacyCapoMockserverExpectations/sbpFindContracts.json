@@ -1,0 +1,23 @@
+{
+  "httpRequest": {
+    "method": "POST",
+    "path": "/SbpProvisioningAccountData/provisioning-account-data/ProvisioningAccountData",
+    "body": {
+      "type": "XML",
+      "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"http://ws.kdg.de/provisioning/data/account/types\"><SOAP-ENV:Body><ns1:FindContractsParams><ns1:findBy>macAddress</ns1:findBy><ns1:searchValue>{{dummyMacAddressLowercase}}</ns1:searchValue><ns1:contractType>hsi</ns1:contractType><ns1:clientInfo><ns1:application>itech</ns1:application></ns1:clientInfo></ns1:FindContractsParams></SOAP-ENV:Body></SOAP-ENV:Envelope>"
+    }
+  },
+  "httpResponse": {
+    "statusCode": 200,
+    "body": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"><soap:Body><FindContractsResult xmlns:ns2=\"http://ipeng.technik.kdg.de/sbp/errors\" xmlns=\"http://ws.kdg.de/provisioning/data/account/types\"><accountNr>{{customerAccountNumber}}</accountNr><accountStatus>20100 Der Kunde ist aktiv.</accountStatus><accountTypes><accType>KUN</accType><origin>{{customerType}}</origin></accountTypes><provider>CCB</provider><region>3</region><hsiContract><contractId>315967773</contractId><subAccountId>1</subAccountId><status>active</status><state>Vertragsdaten (Wizard)</state><stateName>Vertrag wartet auf Provisionierung.</stateName><firstProvisioned>2017-01-11T08:36:37.716+01:00</firstProvisioned><lastModified>2022-05-24T16:30:15.633+02:00</lastModified><barringStatus>unbarred</barringStatus><productFeatures><productFeature><productName>Service 32 Mbit/s   </productName><serviceCode>S16</serviceCode></productFeature></productFeatures><maxUpstream>11500000</maxUpstream><maxDownstream>34000000</maxDownstream><transportStandard>2.0</transportStandard><device><macAddress>bc:05:43:39:7e:c0</macAddress><installation>2022-05-24T16:30:14.920+02:00</installation><equipmentInfo>6360</equipmentInfo><equipmentType>homebox</equipmentType><equipmentVersion>85.06.56</equipmentVersion><serviceAddress><street>Simulatorstrasse</street><houseNumber>42</houseNumber><cityPart>Tempelhof</cityPart><city>Berlin</city><zip>11111</zip></serviceAddress></device><isCableModemCompanyOwned>true</isCableModemCompanyOwned></hsiContract></FindContractsResult></soap:Body></soap:Envelope>"
+  },
+  "timeToLive": {
+    "timeUnit": "MINUTES",
+    "timeToLive": 5,
+    "unlimited": false
+  },
+  "times": {
+    "remainingTimes": 1
+  },
+  "priority": 1
+}

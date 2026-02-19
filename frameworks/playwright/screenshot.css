@@ -1,0 +1,14 @@
+.alertBox-title.alertBox--loading-title {
+    animation: none !important;
+    background-image: none !important;
+}
+
+.alertBox-title.alertBox--loading-title::before,
+.alertBox-title.alertBox--loading-title::after {
+    display: none !important;
+}
+
+.tr[data-table-library_tr-body] > .td.css-1tpkg2e:nth-child(2) > div {
+    display: none !important;
+}
+
