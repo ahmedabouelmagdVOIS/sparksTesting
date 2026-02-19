@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/VFDE-Portals/FeatureTestingInternalInitiative/issues"
   },
+  "publishConfig": {
+    "@ahmedabouelmagdVOIS:registry": "https://npm.pkg.github.com"
+  },
   "homepage": "https://github.com/VFDE-Portals/FeatureTestingInternalInitiative#readme"
 }
