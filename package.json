@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VFDE-Portals/FeatureTestingInternalInitiative.git"
+    "url": "git+https://github.com/ahmedabouelmagdVOIS/sparksTesting.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VFDE-Portals/FeatureTestingInternalInitiative/issues"
+    "url": "https://github.com/ahmedabouelmagdVOIS/sparksTesting/issues"
   },
   "publishConfig": {
     "@ahmedabouelmagdVOIS:registry": "https://npm.pkg.github.com"
   },
-  "homepage": "https://github.com/VFDE-Portals/FeatureTestingInternalInitiative#readme"
+  "homepage": "https://github.com/ahmedabouelmagdVOIS/sparksTesting#readme"
 }

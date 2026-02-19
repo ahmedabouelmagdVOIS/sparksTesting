@@ -178,7 +178,7 @@ mvn test
 
 ### 1. Install as a Dependency
   ```bash
-  npm install git+https://github.com/VFDE-Portals/FeatureTestingInternalInitiative.git
+  npm install git+https://github.com/ahmedabouelmagdVOIS/sparksTesting.git
   ```
 ### 2. Import in Your Code
 

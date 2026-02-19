@@ -21,7 +21,7 @@ This repository contains an advanced Playwright-based end-to-end testing framewo
 ### Setup
 1. Clone the repository (if you haven't already):
    ```bash
-   git clone https://github.com/VFDE-Portals/FeatureTestingInternalInitiative.git
+   git clone https://github.com/ahmedabouelmagdVOIS/sparksTesting.git
    ```
 2. Navigate to the Playwright framework directory:
    ```bash
